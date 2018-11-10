@@ -1,0 +1,15 @@
+{
+  "name": "03-projeto-01",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Orlewilson B. Maia",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cylon-firmata": "^0.24.0",
+    "johnny-five": "^1.0.0"
+  }
+}
