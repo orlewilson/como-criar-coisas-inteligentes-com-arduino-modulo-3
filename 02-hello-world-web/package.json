@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Orlewilson Bentes Maia",
+  "author": "Orlewilson B. Maia",
   "license": "ISC",
   "dependencies": {
     "http": "0.0.0",
