@@ -10,11 +10,17 @@
 var http = require ("http"); 	// servidor web
 var ip = require("ip");			// saber ip da máquina
 
-// criando um servidor web
-http.createServer(function (req, res){
-	res.writeHead(200, {'Content-Type':'text/plain'});
-	res.end('Hello World, NodeJS!');
-}).listen(8080);
+// criando um servidor
+http.createServer(function (req, res) {
+    
+    // informando o tipo de conteúdo
+    res.writeHead(200, {'Content-Type': 'text/plain'});
 
-// mostra o endereco para ser digitado no navegador
+    // mostrar uma mensagem
+    res.end('Hello World! Welcome to NodeJS!');
+
+// porta na qual o servidor estará escutando
+}).listen(8080); 
+
+// mensagem no console
 console.log("Digite no seu navegador http://"+ ip.address() + ":8080");

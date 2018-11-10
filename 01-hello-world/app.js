@@ -6,5 +6,5 @@
   Descricao:         Hello World no console
 */
 
-// mostra mensagem no console do NodeJS
-console.log("Hello World, NodeJS!");
+// mostra mensagem no console
+console.log("Hello World. Welcome to NodeJS!");
