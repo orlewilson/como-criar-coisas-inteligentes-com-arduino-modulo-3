@@ -9,7 +9,6 @@
   "author": "Orlewilson B. Maia",
   "license": "ISC",
   "dependencies": {
-    "http": "0.0.0",
     "ip": "^1.1.5"
   }
 }
