@@ -27,15 +27,15 @@ var musica;
 
 // quando a placa estiver pronta, execute.
 board.on("ready", function() {  
-   
-   // inicializa o piezo na porta 3 
-   piezo = new five.Piezo(3);
+	
+	// inicializa o piezo na porta 3 
+   	piezo = new five.Piezo(3);
 
-   // escolhe a música
-   // exemplos de musicas: mario-fanfare, mario-intro, starwars-theme
-   musica = listaMuiscas.load("mario-fanfare");
+   	// escolhe a música
+   	// exemplos de musicas: mario-fanfare, mario-intro, starwars-theme
+   	musica = listaMuiscas.load("mario-fanfare");
    
-   // toca a musica
-   console.log("tocando a musica...");
-   piezo.play(musica);
+   	// toca a musica
+   	console.log("tocando a musica...");
+   	piezo.play(musica);
 });
