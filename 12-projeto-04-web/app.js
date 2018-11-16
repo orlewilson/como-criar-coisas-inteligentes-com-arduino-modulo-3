@@ -85,7 +85,7 @@ board.on("ready", function() {
 
     // quando for solicitado para desligar o LED
     socket.on('starwars', function (data) {
-       
+     
       // toca a musica
       piezo.play(musica3);
 
