@@ -1,0 +1,36 @@
+<!--
+   Como Criar Coisas Inteligentes com Arduino - Módulo 3
+   Facilitador:       Prof. Orlewilson Bentes Maia
+   Data Criacao:      15/11/2018
+   Data Atualizacao:  16/11/2018
+   Descricao:         Projeto 05: Serviço para registrar acessos 
+                      após identificação
+-->
+
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Exemplo 15 - Mostrar dados lidos cartão RFID</title>
+
+      <!-- importando bibliotecas -->
+      <script src="/socket.io/socket.io.js"></script>
+      
+      <!-- script para comunicar com o servidor -->
+      <script>
+         // criando socket na porta 8080
+         var socket = io('http://localhost:8080');
+         
+         // aguarda alguma resposta do servidor
+         socket.on('respostaRFID', function (data) {
+            // atualiza na página web com o valor lido no arduino
+            document.getElementById('respostaRFID').innerHTML += '</br>' + data; 
+         });
+        
+      </script>
+
+   </head>
+   <body>
+      <h1>Mostrar dados lidos cartão RFID</h1>
+      <p>Leitura: <span id="respostaRFID">não sei</span></p>
+   </body>
+</html> 
