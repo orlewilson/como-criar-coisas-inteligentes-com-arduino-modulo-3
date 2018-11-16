@@ -9,7 +9,6 @@
 */
 
 // importando bibliotecas
-
 // para acesso serial a placa Arduino
 var SerialPort = require('serialport');
 const Readline = require('@serialport/parser-readline')
