@@ -3,22 +3,28 @@
   Facilitador:       Prof. Orlewilson Bentes Maia
   Data Criacao:      15/11/2018
   Data Atualizacao:  16/11/2018
-  Descricao:         Projeto 03: Serviço para alertar sobre 
-                     proximidade de objetos
+  Descricao:         Projeto 06: Serviço para mostrar informações
+  					 de uma mini estação meteorológica
 
 */
 
 // importando bibliotecas
+// para acesso serial a placa Arduino
+var SerialPort = require('serialport');
+const Readline = require('@serialport/parser-readline')
 
-// biblioteca para comunicar com o Arduino
-var five = require("johnny-five");  
+// abre a porta de comunicação
+var port = new SerialPort('COM14', {
+	baudRate: 9600
+});
 
-// informando a porta de comunicação
-var board = new five.Board({port: "COM14"});
- 
 // variáveis
 
-// quando a placa estiver pronta, execute.
-board.on("ready", function() {  
-   
+// formatador de conteúdo
+const parser = port.pipe(new Readline({delimiter: '\r\n'}))
+
+// lê o conteúdo da porta serial
+parser.on('data', function (data) {
+	// mostra os dados no console lidos pela porta serial do arduino
+	console.log(data);    
 });
