@@ -24,7 +24,6 @@ var port = new SerialPort('COM14', {
 // formatador de conteúdo
 const parser = port.pipe(new Readline({delimiter: '\r\n'}))
 
-
 // lê o conteúdo da porta serial
 parser.on('data', function (data) {
 	// mostra os dados no console lidos pela porta serial do arduino
