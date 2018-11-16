@@ -19,8 +19,8 @@ board.on("ready", function() {
    console.log("Placa Arduino pronta!");  
    
    // informando que utilizará Led e qual porta
-   var led = new five.Led(13);  
-   
+   var led = new five.Led(13); 
+    
    // liga/desliga a cada 1s
    led.blink(1000);  
 });
