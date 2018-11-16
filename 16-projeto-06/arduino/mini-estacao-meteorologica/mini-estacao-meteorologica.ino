@@ -1,10 +1,13 @@
 /*
-  Como Criar Coisas Inteligentes com Arduino, NodeJS e Docker - Boa Vista (RR)
-  Facilitador:        Prof. Orlewilson Bentes Maia
-  Autor:              Seu nome
-  Data Criacao:       15/09/2018
-  Descricao:          Criar mini estação meteorológica
+  Como Criar Coisas Inteligentes com Arduino - Módulo 3
+  Facilitador:       Prof. Orlewilson Bentes Maia
+  Data Criacao:      15/11/2018
+  Data Atualizacao:  16/11/2018
+  Descricao:         Projeto 06: Serviço para mostrar informações
+                     de uma mini estação meteorológica
+
 */
+
 // Inclui a biblioteca DHT
 #include "DHT.h" 
 
