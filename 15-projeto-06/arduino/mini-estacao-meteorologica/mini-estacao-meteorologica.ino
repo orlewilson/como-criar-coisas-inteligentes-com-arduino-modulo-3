@@ -5,7 +5,6 @@
   Data Atualizacao:  16/11/2018
   Descricao:         Projeto 06: Serviço para mostrar informações
                      de uma mini estação meteorológica
-
 */
 
 // Inclui a biblioteca DHT
@@ -36,9 +35,8 @@ void atraso (int n){
   
 }
 
-// Função para mostrar valores lidos dos sensores no LCD
-void mostrarValores(float temperatura, float umidade, int luminosidade){
-  
+// Função para mostrar valores lidos dos sensores na porta serial
+void mostrarValores(float temperatura, float umidade, int luminosidade){  
   Serial.println("{\"Temperatura\": \"" + String(temperatura) + "\", \"Umidade\": \"" + String(umidade) + "\", \"Luminosidade\": \"" + String(luminosidade) + "\"}");
 }
 

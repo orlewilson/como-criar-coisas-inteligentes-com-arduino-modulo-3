@@ -3,13 +3,14 @@
    Facilitador:       Prof. Orlewilson Bentes Maia
    Data Criacao:      15/11/2018
    Data Atualizacao:  16/11/2018
-   Descricao:         Projeto 04: Serviço para tocar várias melodias
+   Descricao:         Projeto 04: Serviço para alertar sobre 
+                      proximidade de objetos
 -->
 
 <!DOCTYPE html>
 <html>
    <head>
-      <title>Exemplo 12 - Tocar várias melodias web</title>
+      <title>Exemplo 12 - Mostrar dados lidos Ultrassonico</title>
 
       <!-- importando bibliotecas -->
       <script src="/socket.io/socket.io.js"></script>
@@ -20,38 +21,16 @@
          var socket = io('http://localhost:8080');
          
          // aguarda alguma resposta do servidor
-         socket.on('estadoMusica', function (data) {
-            // atualiza na página web se o LED foi ligado ou desligado
-            document.getElementById('estadoMusica').innerHTML = data; 
+         socket.on('respostaUltrassonico', function (data) {
+            // atualiza na página web com o valor lido no arduino
+            document.getElementById('respostaUltrassonico').innerHTML = data + '</br>' + document.getElementById('respostaUltrassonico').innerHTML; 
          });
-
-         // função para tocar musica mario-fanfare
-         function tocarMario1(){
-            // envia mensagem para tocar mario-fanfare 
-            socket.emit('mario1','');
-         }
-
-         // função para tocar musica mario-intro
-         function tocarMario2(){
-            // envia mensagem para tocar mario-intro
-            socket.emit('mario2','');
-         }
-
-         // função para tocar musica starwars-theme
-         function tocarStarWars(){
-            // envia mensagem para tocar starwars-theme
-            socket.emit('starwars','');
-         }
         
       </script>
 
    </head>
    <body>
-      <h1>Tocar melodias usado pagina web</h1>
-      <p>O que está tocando: <span id="estadoMusica">não sei</span></p>
-      <br/>
-      <button type="button" onclick="tocarMario1()">Tocar mario-fanfare</button>
-      <button type="button" onclick="tocarMario2()">Tocar mario-fanfare</button>
-      <button type="button" onclick="tocarStarWars()">Tocar starwars-theme</button>
+      <h1>Mostrar dados lidos cartão Mostrar dados lidos Ultrassonico</h1>
+      <p>Leitura: <span id="respostaUltrassonico">não sei</span></p>
    </body>
 </html> 

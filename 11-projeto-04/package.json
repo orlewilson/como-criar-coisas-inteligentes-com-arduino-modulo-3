@@ -9,7 +9,7 @@
   "author": "Orlewilson B. Maia",
   "license": "ISC",
   "dependencies": {
-    "j5-songs": "0.0.9",
-    "johnny-five": "^1.0.0"
+    "johnny-five": "^1.0.0",
+    "nodebots-hcsr04": "^0.5.0"
   }
 }

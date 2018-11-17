@@ -1,5 +1,5 @@
 {
-  "name": "13-projeto-04-servico",
+  "name": "14-projeto-05-web",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -10,8 +10,9 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4",
+    "http": "0.0.0",
     "ip": "^1.1.5",
-    "j5-songs": "0.0.9",
-    "johnny-five": "^1.0.0"
+    "serialport": "^7.0.2",
+    "socket.io": "^2.1.1"
   }
 }

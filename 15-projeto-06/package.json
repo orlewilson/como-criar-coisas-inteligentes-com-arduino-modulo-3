@@ -1,5 +1,5 @@
 {
-  "name": "15-projeto-05-web",
+  "name": "15-projeto-06",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -9,10 +9,6 @@
   "author": "Orlewilson B. Maia",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4",
-    "http": "0.0.0",
-    "ip": "^1.1.5",
-    "serialport": "^7.0.2",
-    "socket.io": "^2.1.1"
+    "serialport": "^7.0.2"
   }
 }

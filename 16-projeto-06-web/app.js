@@ -4,7 +4,7 @@
   Data Criacao:      15/11/2018
   Data Atualizacao:  16/11/2018
   Descricao:         Projeto 06: Serviço para mostrar informações
-  					         de uma mini estação meteorológica
+  					             de uma mini estação meteorológica
 
 */
 
@@ -40,7 +40,7 @@ const parser = port.pipe(new Readline({delimiter: '\r\n'}))
 // servidor escutando na porta 8080
 server.listen(8080);
 // mensagem no console
-console.log("Digite no seu navegador http://"+ ip.address() + ":8080");
+console.log("Digite no seu navegador http://"+ ip.address() + ":8080/exemplo-06-web.html");
 
 
 // informando a página HTML que será vista pelo usuário
