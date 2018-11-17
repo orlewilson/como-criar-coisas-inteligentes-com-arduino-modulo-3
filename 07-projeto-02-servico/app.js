@@ -48,11 +48,15 @@ board.on("ready", function() {
   console.log("ligar vermelho: /ligarVermelho");
   console.log("ligar azul: /ligarAzul");
   console.log("ligar verde: /ligarVerde");
+  console.log("desligar: /desligar");
 
   rgb = new five.Led.RGB([6, 5, 3]);
 
   // aguardando chamada /ligar para ligar LED
   app.get('/ligarVermelho', function (req, res) {
+    // parar o loop da festa
+    clearInterval(idIntervalo);
+
     // ligar LED na cor vermelha
     rgb.color("#FF0000")
 
@@ -62,6 +66,9 @@ board.on("ready", function() {
 
   // aguardando chamada /ligar para ligar LED
   app.get('/ligarVerde', function (req, res) {
+    // parar o loop da festa
+    clearInterval(idIntervalo);
+
     // ligar LED na cor verde
     rgb.color("#00FF00")
 
@@ -71,6 +78,9 @@ board.on("ready", function() {
 
   // aguardando chamada /ligar para ligar LED
   app.get('/ligarAzul', function (req, res) {
+    // parar o loop da festa
+    clearInterval(idIntervalo);
+
     // ligar LED na cor azul
     rgb.color("#000080")
 
@@ -80,11 +90,11 @@ board.on("ready", function() {
 
   // aguardando chamada /desligar para desligar LED
   app.get('/desligar', function (req, res) {
+    // parar o loop da festa
+    clearInterval(idIntervalo);
+
     // desliga LED
     rgb.off();
-
-    // para o loop da festa
-    clearInterval(idIntervalo);
 
     // retorna resposta
     res.json({resposta : 'LED desligado'});
